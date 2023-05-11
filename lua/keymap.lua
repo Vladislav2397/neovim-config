@@ -35,8 +35,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers (next and prev tab)
-keymap("n", "<C-l>", ":bnext<CR>", opts)
-keymap("n", "<C-h>", ":bprevious<CR>", opts)
+-- keymap("n", "<C-l>", ":bnext<CR>", opts)
+-- keymap("n", "<C-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
 -- keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -66,7 +66,14 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
+-- Common
+keymap("n", "<F2>", ":w<CR>", opts)
+keymap("n", "<F3>", ":luafile %<CR>", opts)
+
+-- Plugins --
+keymap("n", "<C-n>", ":Neotree toggle<CR>", opts)
+
+-- Terminal:Neotree reveal<cr> --
 -- Better terminal navigation
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
